@@ -1,3 +1,9 @@
+/* All htmls */
+body {
+    background-image: url(../images/connectwork.png);
+    background-repeat: repeat;
+    }
+
 .header {
     background: #fff; 
     border-bottom: 4px solid #ccc;
@@ -50,9 +56,20 @@ nav {
     padding: 20px 15px 20px 15px;
 }
 
+#about:hover {
+    text-shadow: 2px 2px 5px #444444;
+}
+
+#portfolio:hover {
+    text-shadow: 2px 2px 5px #444444;
+}
 
 #contact {
     padding-right: 0;
+}
+
+#contact:hover {
+    text-shadow: 2px 2px 5px #444444;
 }
 
 h2 {
@@ -75,7 +92,7 @@ h2 {
     padding: 20px 20px 20px 21px;
 }
 
-
+/*index.html portion*/
 #pancakes {
     position: relative;
     top: 20px;
@@ -89,10 +106,10 @@ h2 {
     top: 20px;
     margin-right: 30px;
     margin-bottom: 30px;
-    word-spacing: 4px;
+    word-spacing: 2px;
     line-height: 200%;
 }
-
+/*contact.html portion*/
 .formText {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -121,6 +138,7 @@ textarea {
     margin-top: 30px;
 }
 
+/*button hover and onclick pseudo class*/
 .btn-submit:hover {
 	background-color: #337c79;
 }
@@ -129,6 +147,7 @@ textarea {
     background-color: #8cd8d4;
 }
 
+/*portfolio.html portion*/
 .paintings {
     position: relative;
     margin: 30px;
@@ -137,19 +156,70 @@ textarea {
     -webkit-filter: brightness(100%);
 }
 
-.paintingstext{
-    position: relative;
-    bottom: 0;
-	height: 40px;
-	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 22px;
-	color: white;
-	text-align: center;
+/*used flexbox for the painting images and span, source: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.paintingcontainer {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
 
-transition: all 0.2s linear;
+.paintings {
+    margin: 0 15px;
+    display: flex;
+    align-items: flex-end;
+    background: black;
+    padding: 0;
+    width: 260px;
+    height: 156px;
+    margin: 30px;
+    margin-left: 100px;
+    color: white;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 1em;
+    text-align: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#marchingland {
+    background-image: url(../images/marchingland.jpg);
+}
+
+#dalized {
+    background-image: url(../images/dalized.jpg);
+}
+
+#egret {
+    background-image: url(../images/egret.jpg);
+}
+
+#sunflowers {
+    background-image: url(../images/sunflowers.jpg);
+}
+
+#montanasunset {
+    background-image: url(../images/montanasunset.png);
+}
+    
+span {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
     background: #4aaaa5;
 }
 
+.paintingstext{
+    transition: all 0.2s linear;
+    background: #4aaaa5;
+}
+
+/*painting hover pseudo class*/
 .paintings:hover {
     -webkit-filter: brightness(30%);
     -webkit-transition: all 1s ease;
@@ -159,6 +229,7 @@ transition: all 0.2s linear;
     transition: all 1s ease;
 }
 
+/*footer portion, should stay on bottom now*/
 footer {
     position: fixed;
     left: 0;
